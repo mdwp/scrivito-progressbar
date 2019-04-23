@@ -1,14 +1,12 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
-import { Progress } from 'react-sweet-progress';
-
 
 Scrivito.provideComponent("ProgressBarWidget", ({ widget }) => {
-  const type = widget.get('type') || 'percent';
   const percent = widget.get('percent');
-  const status = widget.get('status') || 'active';
+  const title = widget.get('title');
+  const color = widget.get('color') || 'primary';
 
-  if (!percent.length && Scrivito.isInPlaceEditingActive()) {
+  if (!percent && Scrivito.isInPlaceEditingActive()) {
     return (
         <h4 className="text-center">
           Provide the progress bar values in the widget properties.
@@ -18,9 +16,15 @@ Scrivito.provideComponent("ProgressBarWidget", ({ widget }) => {
 
   return (
     <div className="text-center">
-      <Progress type={type} percent={percent} status={status} />
+      <div className="progress-bar-wrapper">
+      <div className={`progress-title-wrapper text-left bg-${color}`} style={{width:percent+'%'}} >
+        <div className="progress-title">{title}</div>
+      </div>
+      <div className="progress-percent text-center">{percent}%</div>
+    </div>
     </div>
   )
 });
+
 
 

@@ -6,33 +6,30 @@ Scrivito.provideEditingConfig("ProgressBarWidget", {
     percent: {
       title: "Percent",
     },
-    type: {
-      title: "Type",
-      description:
-        "Default: Bar",
-      values: [
-        { value: "bar", title: "Bar" },
-        { value: "circle", title: "Circle" },
-
-      ],
+    title: {
+      title: "Title",
     },
-    status: {
-      title: "Type",
+    color: {
+      title: "Color",
       description:
-        "Default: Success",
+        "Default: Primary color",
       values: [
+        { value: "primary", title: "Primary" },
+        { value: "secondary", title: "Secondary" },
+        { value: "dark", title: "Dark" },
         { value: "success", title: "Success" },
-        { value: "active", title: "Active" },
-        { value: "error", title: "Error" },
+        { value: "info", title: "Info" },
+        { value: "warning", title: "Warning" },
+        { value: "danger", title: "Danger" },
 
       ],
     },
   },
+  properties: ["percent","title", "color"],
   initialContent: {
-    percent: 50,
-    type: "bar",
-    status: "active",
-  },
-  properties: ["percent","type", "status"],
+    color: 'primary'
+  }
 
 });
+
+

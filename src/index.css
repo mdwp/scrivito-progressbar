@@ -1,0 +1,29 @@
+.progress-bar-wrapper {
+  height: 40px;
+  background-color: #dedede;
+  border-radius: 6px;
+  position: relative;
+}
+
+.progress-title-wrapper {
+  border-radius: 6px;
+  height: 40px;
+  float: left;
+}
+
+.progress-title {
+  font-size: 20px;
+  margin-top: 8px;
+  color: #fff;
+  padding-left: 8px;
+}
+
+.progress-percent {
+  background-color: #fff;
+  border-radius: 6px;
+  width: 70px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 20px;
+}
