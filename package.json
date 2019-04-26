@@ -24,9 +24,6 @@
     "url": "https://github.com/mdwp/scrivito-progressbar/issues"
   },
   "homepage": "https://github.com/mdwp/scrivito-progressbar#readme",
-  "dependencies": {
-    "react-sweet-progress": "^1.1.2"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
